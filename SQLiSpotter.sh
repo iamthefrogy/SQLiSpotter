@@ -111,7 +111,7 @@ test_sqli() {
             response=$(curl -s --path-as-is --insecure "$test_url")
 
             # Check for common SQL error patterns
-            if echo "$response" | grep -qiE "sql syntax|sql error|warning: mysql|unclosed quotation|odbc drivers error|invalid query|command not properly ended|oracle error|postgresql erro>
+            if echo "$response" | grep -qiE "sql syntax|sql error|warning: mysql|unclosed quotation|odbc drivers error|invalid query|command not properly ended|oracle error|postgresql error|syntax error|unclosed quotation mark|mysql_fetch_array()|mysql_fetch_assoc()"; then
                 #echo -e "\n\033[0;31mPotential SQLi:\033[0m $test_url \n"
                 echo "$test_url" >> output.txt
                 sqli_found=$((sqli_found + 1))
