@@ -13,7 +13,7 @@ chmod +x sqli_probe.sh
 ```
 ./sqli_probe.sh urls.txt
 ```
-Each line in urls.txt should contain one URL to test.
+<img src="https://github.com/iamthefrogy/SQLiSpotter/assets/8291014/33c63584-d6c4-457a-a1d1-2d60e30da758.jpg" height=600px align="center">
 
 ## Dependencies
 ```
