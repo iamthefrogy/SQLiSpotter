@@ -13,7 +13,7 @@ chmod +x sqli_probe.sh
 ```
 ./sqli_probe.sh urls.txt
 ```
-<img src="https://github.com/iamthefrogy/SQLiSpotter/assets/8291014/33c63584-d6c4-457a-a1d1-2d60e30da758.jpg" height=600px align="center">
+<img src="https://github.com/iamthefrogy/SQLiSpotter/assets/8291014/dba65070-6fa4-4a80-8fa0-d7feaf2bbc30.jpg" height=300px align="center">
 
 ## Dependencies
 ```
