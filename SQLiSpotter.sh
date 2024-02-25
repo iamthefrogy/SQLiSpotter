@@ -29,7 +29,6 @@ PAYLOADS=(
 )
 
 # Function to test each URL with each payload
-# Function to test each URL with each payload
 test_sqli() {
     local url="$1"
     for payload in "${PAYLOADS[@]}"; do
