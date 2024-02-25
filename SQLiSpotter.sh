@@ -50,7 +50,6 @@ update_progress() {
 declare -A tested_endpoints
 
 # Function to extract the endpoint and parameter name from a URL
-# Function to extract the endpoint and parameter name from a URL
 extract_endpoint_param() {
     local url="$1"
     # Extract the part of the URL before the '?' (endpoint)
