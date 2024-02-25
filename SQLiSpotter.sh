@@ -29,6 +29,7 @@ PAYLOADS=(
 )
 
 # Function to test each URL with each payload
+# Function to test each URL with each payload
 test_sqli() {
     local url="$1"
     for payload in "${PAYLOADS[@]}"; do
@@ -40,7 +41,8 @@ test_sqli() {
         response=$(curl -s --path-as-is --insecure "$test_url")
         # Check for common SQL error patterns
         if echo "$response" | grep -qiE "sql syntax|sql error|warning: mysql|unclosed quotation|odbc drivers error|invalid query|command not properly ended|oracle error|postgresql error|syntax error|unclosed quotation mark|mysql_fetch_array()|mysql_fetch_assoc()"; then
-            echo -e "\033[0;31mPotential SQLi:\033[0m $test_url \n"
+                echo -e "\033[0;31mPotential SQLi:\033[0m $test_url \n"
+            break # Exit the payload loop as soon as a vulnerability is found
         fi
     done
 }
